@@ -8,7 +8,7 @@ public class OppgaveO3 {
 		boolean validInput = false;
 		while (!validInput) {
 			
-			String Fakultetantall= showInputDialog("Skriv in eit heltall n>0");
+			String Fakultetantall= showInputDialog("Skriv inn eit heltall n>0");
 			
 		try {
 			int n = Integer.parseInt(Fakultetantall);
