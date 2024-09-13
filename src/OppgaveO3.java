@@ -4,8 +4,10 @@ import static javax.swing.JOptionPane.*;
 public class OppgaveO3 {
 
 	public static void main(String[] args) {
+		
 		boolean validInput = false;
 		while (!validInput) {
+			
 			String Fakultetantall= showInputDialog("Skriv in eit heltall n>0");
 			
 		try {
