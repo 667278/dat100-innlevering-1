@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class OppgaveO1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Skriv inn inntekt her: ");
+        String line = sc.nextLine().trim();
+
+        try {
+            int inntekter = Integer.parseInt(line);
+
+            if (inntekter < 0) {
+                System.out.println("Du har skrevet en ugyldig sum!");
+            } else if (inntekter <= 217_400) {
+                System.out.println("Med denne inntekten betaler du ingen trinnskatt");
+            } else if (inntekter <= 306_050) {
+                System.out.println("Med denne inntekten betaler du 1,7% trinnskatt som gir deg ein skatt på " +
+                                   String.format("%.2f", inntekter * 0.017) + " kr");
+            } else if (inntekter <= 697_150) {
+                System.out.println("Med denne inntekten betaler du 4,0% trinnskatt som gir deg ein skatt på " +
+                                   String.format("%.2f", inntekter * 0.04) + " kr");
+            } else if (inntekter <= 942_400) {
+                System.out.println("Med denne inntekten betaler du 13,7% trinnskatt som gir deg ein skatt på " +
+                                   String.format("%.2f", inntekter * 0.136) + " kr");
+            } else if (inntekter <= 1_410_750) {
+                System.out.println("Med denne inntekten betaler du 16,7% trinnskatt som gir deg ein skatt på " +
+                                   String.format("%.2f", inntekter * 0.166) + " kr");
+            } else { // inntekter > 1_410_750
+                System.out.println("Med denne inntekten betaler du 17,7% trinnskatt som gir deg ein skatt på " +
+                                   String.format("%.2f", inntekter * 0.176) + " kr");
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Ugyldig tal — ver venleg og skriv eit heiltal utan bokstavar eller symbol.");
+        } finally {
+            sc.close();
+        }
+    }
+}
