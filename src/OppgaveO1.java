@@ -9,18 +9,18 @@ public class OppgaveO1 {
 		String inntekt= showInputDialog("Skriv in inntekt her");
 		  int inntekter = Integer.parseInt(inntekt);
 		
-		if (208050 >= inntekter && inntekter >=0) {
+		if (217400 >= inntekter && inntekter >=0) {
 			System.out.println("Med denne inntekten betaler du ingen trinnskatt");}
-		else if (292850 >= inntekter && inntekter >=208051) {
+		else if (306 050 >= inntekter && inntekter >=217 401) {
 			System.out.println("Med denne inntekten betaler du 1,7% trinnskatt som gir deg ein skatt på "+(inntekter*0.017)+"kr");}
-		else if (670000 >= inntekter && inntekter >=292851) {
+		else if (697 150 >= inntekter && inntekter >=306 051) {
 			System.out.println("Med denne inntekten betaler du 4,0% trinnskatt som gir deg ein skatt på "+(inntekter*0.04)+"kr");}
-		else if (937900 >= inntekter && inntekter >=670001) {
-			System.out.println("Med denne inntekten betaler du 13,6% trinnskatt som gir deg ein skatt på "+(inntekter*0.136)+"kr");}
-		else if (1350000 >= inntekter && inntekter >=937901) {
-			System.out.println("Med denne inntekten betaler du 16,6% trinnskatt som gir deg ein skatt på "+(inntekter*0.166)+"kr");}
-		else if (inntekter >=1350001) {
-			System.out.println("Med denne inntekten betaler du 17,6% trinnskatt som gir deg ein skatt på "+(inntekter*0.176)+"kr");}
+		else if (942 400 >= inntekter && inntekter >=697 151) {
+			System.out.println("Med denne inntekten betaler du 13,7% trinnskatt som gir deg ein skatt på "+(inntekter*0.136)+"kr");}
+		else if (1 410 750 >= inntekter && inntekter >=942 401) {
+			System.out.println("Med denne inntekten betaler du 16,7% trinnskatt som gir deg ein skatt på "+(inntekter*0.166)+"kr");}
+		else if (inntekter >=1 410 751) {
+			System.out.println("Med denne inntekten betaler du 17,7% trinnskatt som gir deg ein skatt på "+(inntekter*0.176)+"kr");}
 		else
 			showMessageDialog(null, "Du har skrevet en ugyldig sum!");
 	}
