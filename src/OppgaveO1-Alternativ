@@ -21,13 +21,13 @@ public class OppgaveO1 {
                                    String.format("%.2f", inntekter * 0.04) + " kr");
             } else if (inntekter <= 942_400) {
                 System.out.println("Med denne inntekten betaler du 13,7% trinnskatt som gir deg ein skatt på " +
-                                   String.format("%.2f", inntekter * 0.136) + " kr");
+                                   String.format("%.2f", inntekter * 0.137) + " kr");
             } else if (inntekter <= 1_410_750) {
                 System.out.println("Med denne inntekten betaler du 16,7% trinnskatt som gir deg ein skatt på " +
-                                   String.format("%.2f", inntekter * 0.166) + " kr");
+                                   String.format("%.2f", inntekter * 0.167) + " kr");
             } else { // inntekter > 1_410_750
                 System.out.println("Med denne inntekten betaler du 17,7% trinnskatt som gir deg ein skatt på " +
-                                   String.format("%.2f", inntekter * 0.176) + " kr");
+                                   String.format("%.2f", inntekter * 0.177) + " kr");
             }
         } catch (NumberFormatException e) {
             System.out.println("Ugyldig tal — ver venleg og skriv eit heiltal utan bokstavar eller symbol.");
