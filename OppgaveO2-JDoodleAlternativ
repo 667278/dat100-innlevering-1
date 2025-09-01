@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class OppgaveO2 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        for (int elever = 1; elever <= 7; elever++) {
+            boolean running = false;
+            while (!running) {
+                System.out.print("Skriv inn poengsummen her (0-100) for elev " + elever + " av 7: ");
+                
+                if (!sc.hasNextInt()) {
+                    System.out.println("Ugyldig poengsum. Du må skrive eit tal, og det må vere mellom 0 og 100.");
+                    sc.next();
+                    continue;
+                }    
+                int poeng = sc.nextInt();
+
+                if (poeng >= 90 && poeng <= 100) {
+                    System.out.println("A");
+                } else if (poeng >= 80 && poeng <= 89) {
+                    System.out.println("B");
+                } else if (poeng >= 60 && poeng <= 79) {
+                    System.out.println("C");
+                } else if (poeng >= 50 && poeng <= 59) {
+                    System.out.println("D");
+                } else if (poeng >= 40 && poeng <= 49) {
+                    System.out.println("E");
+                } else if (poeng >= 0 && poeng <= 39) {
+                    System.out.println("F");
+                } else {
+                    System.out.println("Du har skrevet en ugyldig poengsum!");
+                }
+
+                if (poeng >= 0 && poeng <= 100) {
+                    running = true;
+                }
+            }
+        }
+
+        sc.close();
+    }
+}
