@@ -1,34 +1,29 @@
-import java.util.Scanner;
+import static javax.swing.JOptionPane.*;
 
 public class OppgaveO3 {
 
 	public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-		boolean validInput = false;
 		
-    while (!validInput) {
-			System.out.print("Skriv inn eit heltall n>0: ");
-      String input = sc.nextLine();
-
-      
-
+		boolean validInput = false;
+		while (!validInput) {
+			
+			String Fakultetantall= showInputDialog("Skriv inn eit heltall n>0");
+			
 		try {
-			int n = Integer.parseInt(input.trim());
+			int n = Integer.parseInt(Fakultetantall);
 			if (n>0) {
 				int Fakultet = 1;
 				for (int i =1;i <= n; i++ ) {
 					Fakultet *=i;
 				}
-				System.out.println("Verdien av " + n + "! er " + Fakultet);
+				showMessageDialog(null, "Verdien av " + n + "! er " + Fakultet);
 				validInput = true;
 			}
 			else
-				System.out.println("Du har skrevet en ugyldig verdi for n");
+				showMessageDialog(null,"Du har skrevet en ugyldig verdi for n");
 	} catch (NumberFormatException e) {
-				System.out.println("Du har skrevet inn eit ugyldig heltall over 0");
+				showMessageDialog(null, "Du har skrevet inn eit ugyldig heltall over 0");
 		}
 	}
-
-  sc.close();
  }
 }
