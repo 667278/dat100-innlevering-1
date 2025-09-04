@@ -7,28 +7,35 @@ public class OppgaveO1 {
         String line = sc.nextLine().trim();
 
         try {
-            int inntekter = Integer.parseInt(line);
+            int inntekt = Integer.parseInt(line);
 
-            if (inntekter < 0) {
+            if (inntekt < 0) {
                 System.out.println("Du har skrevet en ugyldig sum!");
-            } else if (inntekter <= 217_400) {
+            } else if (inntekt <= 217_400) {
                 System.out.println("Med denne inntekten betaler du ingen trinnskatt");
-            } else if (inntekter <= 306_050) {
-                System.out.println("Med denne inntekten betaler du 1,7% trinnskatt som gir deg ein skatt på " +
-                                   String.format("%.2f", inntekter * 0.017) + " kr");
-            } else if (inntekter <= 697_150) {
-                System.out.println("Med denne inntekten betaler du 4,0% trinnskatt som gir deg ein skatt på " +
-                                   String.format("%.2f", inntekter * 0.04) + " kr");
-            } else if (inntekter <= 942_400) {
-                System.out.println("Med denne inntekten betaler du 13,7% trinnskatt som gir deg ein skatt på " +
-                                   String.format("%.2f", inntekter * 0.137) + " kr");
-            } else if (inntekter <= 1_410_750) {
-                System.out.println("Med denne inntekten betaler du 16,7% trinnskatt som gir deg ein skatt på " +
-                                   String.format("%.2f", inntekter * 0.167) + " kr");
-            } else { // inntekter > 1_410_750
-                System.out.println("Med denne inntekten betaler du 17,7% trinnskatt som gir deg ein skatt på " +
-                                   String.format("%.2f", inntekter * 0.177) + " kr");
+            } else {
+                double skatt = 0.0;
+
+            if (inntekt > 217_400) {
+                skatt += (Math.min(inntekt, 306_050) - 217_400) * 0.017;
+            }  
+            if (inntekt > 306_050) {
+                skatt += (Math.min(inntekt, 697_150) - 306_050) * 0.04;
             }
+            if (inntekt > 697_150) {
+                skatt += (Math.min(inntekt, 942_400) - 697_150) * 0.137;
+            }
+            if (inntekt > 942_400) {
+                skatt += (Math.min(inntekt, 1_410_750) - 942_400) * 0.167;
+            }
+            if (inntekt > 1_410_750) {
+                skatt += (inntekt - 1_410_750) * 0.177;
+            }
+            
+            System.out.println("Med denne inntekten betaler du trinnskatt på " +
+                                String.format("%.2f", skatt) + " kr");
+            }
+
         } catch (NumberFormatException e) {
             System.out.println("Ugyldig tal — ver venleg og skriv eit heiltal utan bokstavar eller symbol.");
         } finally {
