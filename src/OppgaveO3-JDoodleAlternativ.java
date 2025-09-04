@@ -1,3 +1,6 @@
+//Denne versjonen bruker int, noko som gjer at den er meir begrensa.
+//Ein mulig forbetring kunne vere å bruke long.
+
 import java.util.Scanner;
 
 public class OppgaveO3 {
