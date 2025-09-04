@@ -1,5 +1,3 @@
-
-
 import static javax.swing.JOptionPane.*;
 
 public class OppgaveO1 {
