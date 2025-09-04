@@ -10,8 +10,7 @@ public class OppgaveO3 {
 			System.out.print("Skriv inn eit heltall n>0: ");
       String input = sc.nextLine();
 
-      
-
+		
 		try {
 			int n = Integer.parseInt(input.trim());
 			if (n>0) {
